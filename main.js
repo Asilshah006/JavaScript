@@ -1,4 +1,12 @@
-console.log("Hello World!");
-console.log(typeof "Asil");
-console.log(typeof 42);
-console.log(typeof true);
+const myVariable = "Mathematics";
+console.log(myVariable.length);
+console.log(myVariable.charAt(6));
+console.log(myVariable.indexOf('mat'));
+console.log(myVariable.lastIndexOf('ath'));
+console.log(myVariable.slice(5,9));
+console.log(myVariable.toUpperCase());
+console.log(myVariable.toLowerCase());
+console.log(myVariable.includes("ind"));
+console.log(myVariable.includes("mat"));
+console.log(myVariable.split("m"));
+console.log("Every one is Good".split(" "));
