@@ -1,41 +1,54 @@
 
-// Conditionals : IF Statements
+// Conditionals : Switch Statements
 
 //Syntax
 
-let num = 9;
+let num = 6;
 
-let reply;
-
-if(num%2==0){
-    reply = "Even Number";
-    
+switch(num){
+    case 1 :
+        console.log("Your Number is 1");
+        break;
+    case 3 :
+        console.log("Your Number is 3");
+        break;
+    default:
+        console.log("Invalid Number")       
 }
-else{
-    reply="Odd Number";
+
+let player = "scissors";
+let computer = "paper";
+
+switch(player){
+    case computer:
+        console.log("Tie game");
+        break;
+
+    case "rock":
+        if(computer == "paper"){
+            console.log("Computer Wins");
+        }
+        else{
+            console.log("Player Wins");
+        }
+        break;
+   
+    case "scissor":
+        if(computer == "rock"){
+            console.log("Computer Wins");
+        }
+        else{
+            console.log("Player Wins");
+        }
+        break;
+
+    default:
+        if(computer == "scissors"){
+            console.log("Computer Wins");
+        }
+        else{
+            console.log("Player Wins");
+        }
+        break;
+
 }
-console.log(reply);
-
-let score = 59;
-let grade;
-let collegeStudent = false;
-
-if(score >=90){
-    grade = 'A';
-}else if(score >=80){
-    grade = 'B';
-}else if(score >=70){
-    grade = 'C';
-}else if(score >=60){
-    grade = 'D';
-}else{
-    if(collegeStudent){
-        grade = 'U';
-    }
-    else{
-        grade = 'F'
-    }
-}
-console.log(grade);
-
-
