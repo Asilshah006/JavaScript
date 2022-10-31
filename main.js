@@ -1,54 +1,22 @@
+let soup ;
 
-// Conditionals : Switch Statements
+console.log(soup ? "Here's your soup" : "Sorry Sir No soup today");
 
-//Syntax
 
-let num = 6;
+let isBanned = false;
 
-switch(num){
-    case 1 :
-        console.log("Your Number is 1");
-        break;
-    case 3 :
-        console.log("Your Number is 3");
-        break;
-    default:
-        console.log("Invalid Number")       
-}
+console.log(isBanned ? "No Soup Available"
+:soup
+? "Here's your soup" : "No soup availible");
 
-let player = "scissors";
-let computer = "paper";
 
-switch(player){
-    case computer:
-        console.log("Tie game");
-        break;
+let score = 59;
 
-    case "rock":
-        if(computer == "paper"){
-            console.log("Computer Wins");
-        }
-        else{
-            console.log("Player Wins");
-        }
-        break;
-   
-    case "scissor":
-        if(computer == "rock"){
-            console.log("Computer Wins");
-        }
-        else{
-            console.log("Player Wins");
-        }
-        break;
-
-    default:
-        if(computer == "scissors"){
-            console.log("Computer Wins");
-        }
-        else{
-            console.log("Player Wins");
-        }
-        break;
-
-}
+console.log(score > 90 ? 'A'
+:score>80 
+? 'B'  
+:score>70 
+? 'C'  
+:score>60 
+? 'D'  
+: 'F'  )
