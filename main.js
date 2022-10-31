@@ -1,9 +1,6 @@
-console.log(Math.PI);
-console.log(Math.round(Math.PI));
-console.log(Math.round(3.6));
-console.log(Math.trunc(Math.PI));
-console.log(Math.ceil(Math.PI));
-console.log(Math.floor(Math.PI));
-console.log(Math.pow(2,4));
-console.log(Math.max(1,2,3,9));
-console.log(Math.min(1,2,3,9));
+let myName = "Fuck";
+
+console.log(myName.charAt(Math.floor(Math.random() * myName.length)));
+console.log(myName.charAt(Math.floor(Math.random() * myName.length)));
+console.log(myName.charAt(Math.floor(Math.random() * myName.length)));
+console.log(myName.charAt(Math.floor(Math.random() * myName.length)));
