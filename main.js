@@ -1,22 +1,16 @@
-let soup ;
+// User input
 
-console.log(soup ? "Here's your soup" : "Sorry Sir No soup today");
+//alert("Hello");
 
+// let mybool = confirm("Are you Sure!");
+// console.log(mybool);
 
-let isBanned = false;
+let myname = prompt("Enter Name?")
 
-console.log(isBanned ? "No Soup Available"
-:soup
-? "Here's your soup" : "No soup availible");
-
-
-let score = 59;
-
-console.log(score > 90 ? 'A'
-:score>80 
-? 'B'  
-:score>70 
-? 'C'  
-:score>60 
-? 'D'  
-: 'F'  )
+if(myname){
+    console.log(myname)
+    console.log(myname.length)
+    console.log(myname.trim().length)
+    console.log(myname.trim())
+}
+ 
