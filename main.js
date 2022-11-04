@@ -1,40 +1,51 @@
-// Loops
+// Functions
 
-let myNumber = 51;
+function sum(a,b){
+    console.log(a);
+    console.log(b);
 
-
-while(myNumber <=100){
-    console.log(myNumber);
-    myNumber++;
-}
-
-let myNumber1 = 51
-
-do{
-    console.log(myNumber1);
-    myNumber+= 2;
-}while(myNumber <= 50);
-
-let Name = "Asil";
-
-for(let i = 0 ; i<=Name.length ; i++){
-    console.log(Name.charAt(i)) ;  
-}
-
-
-let counter = 0;
-let myLetter;
-while(counter<=3){
-    myLetter = Name[counter];
-    console.log(myLetter);
-
-    if(counter === 1){
-        counter +=2;
-        continue;
+    if(b === undefined){
+        return a+a;
     }
-
-    if(myLetter === "i"){
-        break;
-    }
-    counter++
+    return a+b;
 }
+
+console.log(sum(4))
+
+function getUserNameFromEmail(email){
+return email.slice(0,email.indexOf("@"));
+}
+console.log(getUserNameFromEmail("asilshah17@gmail.com"))
+
+
+
+
+
+
+const getUserNameFromEmail1 = function (email){
+return email.slice(0,email.indexOf("@"));
+}
+
+console.log(getUserNameFromEmail1("Hunainshah17@gmail.com"))
+
+
+
+
+
+
+
+const getUserNameFromEmail2 = (email) =>{
+return email.slice(0,email.indexOf("@"));
+}
+
+console.log(getUserNameFromEmail2("Laraibshah17@gmail.com"))
+
+
+
+
+
+const toProperCase = (string) =>{
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
+console.log(toProperCase("september"))
