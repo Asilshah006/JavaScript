@@ -1,52 +1,40 @@
-let playerGame = confirm("Do you Want to play?");
+// Loops
 
-if(playerGame){
+let myNumber = 51;
 
-    let computerinput = "rps";
-    let computerChoice = computerinput.charAt(Math.floor(Math.random() * 3)); 
-    
-    if(computerChoice === 'r'){
-        computerChoice ="rock";
-    }else if(computerChoice == 'p'){
-        computerChoice = "paper";
-    }else{
-        computerChoice = "scissors"
-    }
 
-    let playerchoice = prompt("Enter Your Choice:");
-
-    if(playerchoice){
-        playerchoice = playerchoice.toLowerCase();
-        console.log("Player Choice :" , playerchoice);
-        console.log("Computer Choice :" , computerChoice);
-
-        if(playerchoice === computerChoice){
-            console.log("Tie Game");
-        }else if(playerchoice === "rock" && computerChoice === "scissors" ){
-            console.log("Player Wins");
-        }
-        else if(playerchoice === "rock" && computerChoice === "paper" ){
-            console.log("computer Wins");
-        }
-        else if(playerchoice === "paper" && computerChoice === "rock" ){
-            console.log("Player Wins");
-        }
-        else if(playerchoice === "paper" && computerChoice === "scissors" ){
-            console.log("computer Wins");
-        }
-        else if(playerchoice === "scissors" && computerChoice === "paper" ){
-            console.log("Player Wins");
-        }
-        else if(playerchoice === "scissors" && computerChoice === "rock"){
-            console.log("computer Wins");
-        }
-    }
-    else{
-        console.log("You didn't  enter your choice!");
-    }
-
+while(myNumber <=100){
+    console.log(myNumber);
+    myNumber++;
 }
 
-else{
-    console.log("Ok Next Time!");
+let myNumber1 = 51
+
+do{
+    console.log(myNumber1);
+    myNumber+= 2;
+}while(myNumber <= 50);
+
+let Name = "Asil";
+
+for(let i = 0 ; i<=Name.length ; i++){
+    console.log(Name.charAt(i)) ;  
+}
+
+
+let counter = 0;
+let myLetter;
+while(counter<=3){
+    myLetter = Name[counter];
+    console.log(myLetter);
+
+    if(counter === 1){
+        counter +=2;
+        continue;
+    }
+
+    if(myLetter === "i"){
+        break;
+    }
+    counter++
 }
