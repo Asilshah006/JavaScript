@@ -1,69 +1,45 @@
-// var , let and const
+
+// const myArray = [];
+
+// myArray[0] = "Asil";
+// myArray[1] = 1001;
+// myArray[2] = false;
 
 
-// var x = 2;
-// var x = 3;
+// console.log(myArray);
 
-// console.log(x);
+// console.log(myArray.length);
 
+// console.log(myArray.indexOf(false));
 
-// let y = 2;
-// let y = 3;
+// myArray.push(42);
 
-// console.log(y);
+// console.log(myArray);
 
+// myArray.unshift("Hello");
 
-// const x = 1;
-// x =3;
-// console.log(x);
-
-
-// Global Scope
-
-// var x =1;
-// let y = 2;
-// const z = 3;
+// console.log(myArray);
 
 
 
-// // Local Scope
-// // {
-//         console.log(x);
-// //     let a =2
-// //     console.log(a);
-// // }
+// console.log(myArray);
 
-// console.log(a);
+// console.log(myArray.pop());
 
+// console.log(myArray.shift());
 
+// console.log(myArray);
 
+const abc = ["A" , "B" , "C" ,"D" , "E" , "F" ]
+const def = ["G" , "H" , "I"];
 
+const newString =  abc.join();
 
-var x = 1 ;
-let y = 2;
-const z = 3;
-
-console.log("Global : " +x);
-console.log("Global : " +y);
-console.log("Global : " +z);
-
-function myFunc(){
-    var x = 10; // Function Scoped
-    const z = 5; // Block Scoped
-
-    
-    {
-        var x = 3;
-        const z = 6;
-        console.log("Block : " +x);
-        console.log("Block : " +y);
-        console.log("Block : " +z);
-        
-    }
-    console.log("Function : " +x);
-    console.log("Function : " +y);
-    console.log("Function : " +z);
-}
+const newArray = newString.split(",");
+console.log(newArray);
 
 
-myFunc();
+
+const twoArray = [abc , def];
+
+console.log(twoArray);
