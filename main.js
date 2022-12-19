@@ -33,6 +33,8 @@
 const abc = ["A" , "B" , "C" ,"D" , "E" , "F" ]
 const def = ["G" , "H" , "I"];
 
+console.log(abc.slice(4));
+
 const newString =  abc.join();
 
 const newArray = newString.split(",");
@@ -40,6 +42,20 @@ console.log(newArray);
 
 
 
-const twoArray = [abc , def];
+const twoArray = abc.concat(def);
 
 console.log(twoArray);
+
+const myArray = [abc , def];
+
+
+console.log(myArray);
+console.log(myArray[0][5]);
+
+console.log(myArray[1][2]);
+
+
+
+
+
+
