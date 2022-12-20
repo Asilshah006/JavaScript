@@ -1,61 +1,98 @@
+// let myobj = {
+//     name : "Dave",
+//     answer : 42,
+//     alive : true,
+//     Hobbies : ["Eat" , "Sleep" , "Code"],
+//     Beverages : {
+//         morning : "Coffee",
+//         afternoon : "Iced Tea"
+//     },
+//         action : function() {
+//         return `Time for ${myobj.Beverages.afternoon}`;
+//     } 
 
-// const myArray = [];
+    
+// };
 
-// myArray[0] = "Asil";
-// myArray[1] = 1001;
-// myArray[2] = false;
-
-
-// console.log(myArray);
-
-// console.log(myArray.length);
-
-// console.log(myArray.indexOf(false));
-
-// myArray.push(42);
-
-// console.log(myArray);
-
-// myArray.unshift("Hello");
-
-// console.log(myArray);
+//     console.log(myobj.action());
 
 
+// const vehicle = {
+//     wheels: 4,
+//     engine : function(){
+//         return "Vrrrooom";
+//     }
 
-// console.log(myArray);
+// }
 
-// console.log(myArray.pop());
+// const truck = Object.create(vehicle);
 
-// console.log(myArray.shift());
-
-// console.log(myArray);
-
-const abc = ["A" , "B" , "C" ,"D" , "E" , "F" ]
-const def = ["G" , "H" , "I"];
-
-console.log(abc.slice(4));
-
-const newString =  abc.join();
-
-const newArray = newString.split(",");
-console.log(newArray);
+// truck.doors = 2;
+// console.log(truck.wheels);
+// console.log(truck.doors);
+// console.log(truck.engine());
 
 
 
-const twoArray = abc.concat(def);
 
-console.log(twoArray);
+// const car = Object.create(vehicle);
 
-const myArray = [abc , def];
+// car.doors = 4;
+// car.engine = function() { 
+//     return "Whooosh";
+// }
 
-
-console.log(myArray);
-console.log(myArray[0][5]);
-
-console.log(myArray[1][2]);
+// console.log(car.doors);
+// console.log(car.engine());
 
 
 
 
 
+// const tesla = Object.create(car);
 
+// tesla.engine = function(){
+//     return "Sssshhhhh";
+// }
+
+// console.log(tesla.wheels);
+// console.log(tesla.engine());
+
+
+const band = {
+    vocals : "Robert plant",
+    guitar : "Jimmy Page",
+    bass : "John Paul Jones",
+    drums : "John Boonham" 
+};
+
+// delete band.drums;
+// console.log(band.hasOwnProperty("drums"));
+
+// console.log(Object.keys(band));
+// console.log(Object.values(band));
+
+// for (let job in band){
+//     //console.log(band[job]);
+//     console.log(`On ${job}, its ${band[job]} `);
+// }
+
+
+
+
+// destructuring Objects
+
+// const {guitar : myvariable , vocals : vocal} = band;
+
+// console.log(myvariable);
+// console.log(vocal);
+
+const {vocals , guitar , bass , drums} = band;
+
+console.log(vocals);
+
+function sings({vocals}){
+    return `${vocals} Sings!`;
+}
+
+console.log(sings(band));
