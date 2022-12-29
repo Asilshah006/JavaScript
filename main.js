@@ -1,89 +1,107 @@
-// Document Object Modelling
-
-const view1 = document.getElementById("view1");
-
-console.log(view1);
-
-const view2 = document.querySelector("#view2");
-
-console.log(view2);
-
-view1.style.display = "flex";
-view2.style.display = "none";
-
-const views = document.getElementsByClassName("view");
-console.log(views);
-
-const sameViews = document.querySelectorAll(".view");
-console.log(sameViews);
-
-const divs = view1.querySelectorAll("div");
-console.log(divs);
-
-const sameDivs = view1.getElementsByTagName("div");
-console.log(sameDivs);
-
-const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
-console.log(evenDivs);
-
-for (let i = 0 ; i<evenDivs.length ; i++){
-    evenDivs[i].style.backgroundColor = "darkblue";
-    evenDivs[i].style.width = "100px";
-    evenDivs[i].style.height = "100px";
-}
-
-const navText = document.querySelector("nav h1");
-console.log(navText);
-
-navText.textContent = "Hello World";
-
-const navBar = document.querySelector("nav");
-navBar.innerHTML =  `<h1>Hello</h1> <p>This should be align right.</p>`
-console.log(navBar);
-
-
-//Navigating DOM tree
-
-console.log(evenDivs[0]);
-console.log(evenDivs[0].parentElement);
-console.log(evenDivs[0].parentElement.children);
-console.log(evenDivs[0].parentElement.childNodes);
-console.log(evenDivs[0].parentElement.hasChildNodes());
-console.log(evenDivs[0].parentElement.lastChild);
-console.log(evenDivs[0].parentElement.lastElementChild);
-console.log(evenDivs[0].parentElement.firstChild);
-console.log(evenDivs[0].parentElement.firstElementChild);
-console.log(evenDivs[0].nextSibling);
-console.log(evenDivs[0].nextElementSibling.nextElementSibling);
-console.log(evenDivs[0].previousSibling);
-console.log(evenDivs[0].previousElementSibling);
-
+const view1 = document.querySelector("#view1");
+// console.log(view1);
 
 view1.style.display = "none";
-view2.style.display = "flex";
-view2.style.flexDirection = "row";
-view2.style.flexWrap = "wrap";
-view2.style.margin = "10px";
 
-while(view2.lastChild){
-    view2.lastChild.remove();
+const view2 = document.getElementById("view2");
+// console.log(view2);
+
+//view2.style.display = "flex";
+view2.style.display = "none";
+
+const vie3 = document.querySelector("#view3");
+vie3.style.display ="flex";
+
+
+
+
+
+
+
+
+// Syntax : addEventListener("click , function , useCapture");
+
+// const doSomething = () =>{
+//     alert("doing Something");
+// }
+
+// //h2.addEventListener("click" , doSomething , false);
+// // h2.removeEventListener("click" , doSomething , false);
+
+// h2.addEventListener("click", (event) => {
+//     console.log(event.target);
+//     event.target.textContent = "Clicked";
+// } );
+
+
+document.addEventListener("readystatechange" , (event) =>{
+    if(event.target.readyState === "complete"){
+        console.log("readystate : complete");
+        initApp();
+    }
+} );
+
+// const initApp = () => {
+//     const view = document.querySelector("#view2");
+//     const div = view.querySelector("div");
+//     const h2 = div.querySelector("h2");
+
+//     view.addEventListener("click" , (event) =>{
+    
+//         //view.style.backgroundColor = "purple";
+
+//         view.classList.toggle("purple");
+//         view.classList.toggle("darkblue");
+
+//     }, 
+//     false );
+
+//     div.addEventListener("click" , (event) =>{
+        
+//         //div.style.backgroundColor = "blue";
+
+//         div.classList.toggle("blue");
+//         div.classList.toggle("black");
+
+//     },
+//     false );
+
+//     h2.addEventListener("click" , (event) =>{
+//         //event.stopPropagation();
+//        //event.target.textContent = "Clicked";
+ 
+//         let mytext = event.target.textContent;
+
+//         mytext === "My 2nd View"
+//         ? (event.target.textContent = "Clicked")
+//         : (event.target.textContent = "My 2nd View"); 
+ 
+//     },
+//     false );
+
+// }
+
+//     const nav = document.querySelector("nav");
+
+//     nav.addEventListener("mouseover", (event) => {
+//         event.target.classList.add("height100");
+//     }
+//     ,false);
+
+//     nav.addEventListener("mouseout" , (event) =>{
+//     event.target.classList.remove("height100");        
+//     }
+//     ,false);
+
+const initApp = () =>{
+    const view3 = document.querySelector("#view3");
+
+    const myform = view3.querySelector("#myForm");
+
+    myform.addEventListener("submit" , (event) =>{
+        event.preventDefault();
+        console.log("Submit Event");
+    },
+    false)
+
 }
-
-const createDivs = (parent , iter) =>{
-    const newDiv = document.createElement("div");
-    newDiv.textContent = iter;
-    newDiv.style.backgroundColor = "#000";
-    newDiv.style.width = "100px";
-    newDiv.style.height = "100px";
-    newDiv.style.margin = "10px"
-    newDiv.style.display = "flex";
-    newDiv.style.justifyContent = "center"; 
-    newDiv.style.alignItems = "center"; 
-    newDiv.style.color = "#fff"
-    parent.append(newDiv);
-}
-
-for (let i = 1 ; i<=12 ; i++){
-    createDivs(view2 , i);
-}
-
