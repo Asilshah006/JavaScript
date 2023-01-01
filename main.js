@@ -1,26 +1,16 @@
-const view = document.querySelector("#view1");
+ // Modules
+ // import playGuitar from "./guitars.js";
+ // import { shredding as shred , plucking as fingerpicking } from "./guitars.js";
 
-view.style.display = "flex";
+import * as Guitars from "./guitars.js";
 
-const myArray = ["eat" , "sleep" , "code" ];
+console.log(Guitars.playGuitar());
+console.log(Guitars.shredding());
+console.log(Guitars.plucking());
 
-const myObj = {
-    name : "ASil",
-    hobbies: ["eat" , "sleep" , "code" ],
-    logname : function(){
-        console.log(
-        this.name
-        );
-    }
-}
+import User from "./user.js";
 
+const me = new User("asilshah17@gmail.com" , "Asil");
 
-localStorage.setItem("mySessionStore" ,JSON.stringify(myObj));
-//localStorage.removeItem("mySessionStore");
-//localStorage.clear();
-const key = localStorage.key(0);
-const length = localStorage.length;
-console.log(key);
-console.log(length);
-const mydata = JSON.parse(localStorage.getItem("mySessionStore"));
-console.log(mydata);
+console.log(me);
+console.log(me.greeting());
