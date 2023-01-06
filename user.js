@@ -8,3 +8,4 @@ export default class User {
         return `Hi my name is ${this._name}`;
       }
 }
+

@@ -1,4 +1,4 @@
-export function playGuitar(){
+export default function playGuitar(){
     console.log("Playing Guitar");
 }
 export const shredding = () =>{
